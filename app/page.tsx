@@ -5,14 +5,14 @@ export default function Home() {
     <main className="min-h-fit">
 
       {/* first section */}
-      <div className=' bg-black text-white'>
+      <div className='  text-white bg-fixed backgroud-image'>
         <div className='flex flex-row justify-between p-5 '>
           <h1 className='font-bold text-2xl text-blue-900'>
            Logo</h1>
           <div className='hidden sm:hidden md:flex lg:flex xl:flex'>
             <ul className='flex flex-row gap-5'>
               <li>FEATURES</li>
-              <li>BLOG</li>
+              <li>BLOG</li>                                                                                                                                                                                                                                                                                                                                                         
               <li>CREATE ACCOUNT</li>
               <li>LOGIN </li>
             </ul>
@@ -33,7 +33,7 @@ export default function Home() {
       <div className="p-4">
         <h1 className='text-center font-bold text-blue-900 text-2xl p-5'>Features</h1>
         <div className='m-3'>
-          <ul className='card shadow-xl bg-white rounded-md m-8'>
+          <ul className='card shadow-xl bg-white rounded-md m-8 text-center '>
             <li>
               <Image src=""
                 alt="first importance image"
@@ -42,7 +42,7 @@ export default function Home() {
                 height={200}
               /></li>
             <li className="p-4">
-              <h1 className="font-md text-xl trext-blue-900">Keeping track of your meetings and events</h1>
+              <h1 className="font-bold text-xl trext-blue-900">Keeping track of your meetings and events</h1>
             </li>
             <li className='p-4'>
               <p className="font-sm">Don&apos;t be late again. Make sure you get notification 1 hour before the meeting start, to prepare well. </p>
@@ -50,36 +50,36 @@ export default function Home() {
           </ul>
         </div>
         <div className='m-3'>
-          <ul className='card shadow-xl bg-white rounded-md m-8'>
+          <ul className='card shadow-xl bg-white text-center rounded-md m-8'>
             <li>
               <Image src=""
-                alt="first importance image"
+                alt="second importance image"
                 className='rounded-t-md'
                 width={200}
                 height={200}
               /></li>
             <li className="p-4">
-              <h1 className="font-bold text-xl trext-blue-900">Keeping track of your meetings and events</h1>
+              <h1 className="font-bold text-xl trext-blue-900">Helping you keep time</h1>
             </li>
             <li className='p-4'>
-              <p>Don&apos;t be late again. Make sure you get notification 1 hour before the meeting start, to prepare well. </p>
+              <p>Our system is designed in a way that your top and important schedules are announced too earlier to make sure you don&apos;t forget about them. </p>
             </li>
           </ul>
         </div>
         <div className='m-3'>
-          <ul className='card shadow-xl bg-white rounded-md m-8'>
+          <ul className='card shadow-xl bg-white text-center rounded-md m-8'>
             <li>
               <Image src=""
-                alt="first importance image"
+                alt="third importance image"
                 className='rounded-t-md'
                 width={200}
                 height={200}
               /></li>
             <li className="p-4">
-              <h1 className="font-bold text-xl trext-blue-900">Keeping track of your meetings and events</h1>
+              <h1 className="font-bold text-xl trext-blue-900">Memories</h1>
             </li>
             <li className='p-4'>
-              <p clasName="p-2 font-sm text-sm">Don&apos;t be late again. Make sure you get notification 1 hour before the meeting start, to prepare well. </p>
+              <p className="font-sm">Gives you alert on the most important previous events or Activities with your loved ones. </p>
             </li>
           </ul>
         </div>
