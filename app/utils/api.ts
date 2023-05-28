@@ -11,31 +11,30 @@ import { toast } from  'react-toastify';
 // TODO set up axios API in the meantime as i look more into graphql API
 
 // register user
-export const register = async (payload: any) => {
+export const register = async (payload: {}) => {
     try {
         const res = await instance.post("auth/register", payload);
         if (res.status == 200) {
-            localStorage.setItem("user",res.data);
+            localStorage.setItem("user",res.data.data);
             toast.success("User registered")
-        }
+        }toast.error(res.data.message)
     } catch (Error:any) {
-      
-        toast.error(`${Error.response.data.message}`);
+        toast.error(`${Error.message}`);
        
     }
  
 }
 
 
-export const login = async (payload: any) => {
+export const login = async (payload:{}) => {
     try {
         const res = await instance.post("auth/login", payload);
         if (res.status == 200) { 
-            console.log(res.data);
-            localStorage.setItem("userToken", res.data);
+            console.log(res.data.token);
+            localStorage.setItem("userToken", res.data.token);
             toast.success("Welcome back !")
-        }
+        }toast.error(res.data.message)
     } catch (Error:any) {
-        toast.error(`${Error.response.data.message}`);
+        toast.error(`${Error.message}`);
     }
 }

@@ -14,7 +14,7 @@ function SignUp() {
     const [password, setPassword] = useState("");
     const [timeZone, setTimeZone] = useState("");
     const [isLoading, setIsLoading] = useState(false);
-    // const navigate = useRouter();
+    const router = useRouter();
 
     const handleSubmit = () => {
         const userData = { email:email,  password:password, username:userName, timezone:timeZone, };
@@ -22,7 +22,9 @@ function SignUp() {
       
         console.log("from client", userData);
         setIsLoading(true);
-        register(userData).then(()=>setIsLoading(false));
+        register(userData).then(() => setIsLoading(false)).finally(() => {
+            router.push("/dashboard");
+        });
        
     }
 
