@@ -13,14 +13,16 @@ function SignUp() {
     const [userName, setUserName] = useState("");
     const [password, setPassword] = useState("");
     const [timeZone, setTimeZone] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
     // const navigate = useRouter();
 
     const handleSubmit = () => {
         const userData = { email:email,  password:password, username:userName, timezone:timeZone, };
         // should validate the values then set validate to true 
       
-        console.log("from client" ,userData);
-        register(userData);
+        console.log("from client", userData);
+        setIsLoading(true);
+        register(userData).then(()=>setIsLoading(false));
        
     }
 

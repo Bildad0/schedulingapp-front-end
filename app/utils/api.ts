@@ -15,14 +15,27 @@ export const register = async (payload: any) => {
     try {
         const res = await instance.post("auth/register", payload);
         if (res.status == 200) {
-            console.log("From server" ,res.data);
             localStorage.setItem("user",res.data);
             toast.success("User registered")
         }
     } catch (Error:any) {
-        console.log(Error);
+      
         toast.error(`${Error.response.data.message}`);
        
     }
  
+}
+
+
+export const login = async (payload: any) => {
+    try {
+        const res = await instance.post("auth/login", payload);
+        if (res.status == 200) { 
+            console.log(res.data);
+            localStorage.setItem("userToken", res.data);
+            toast.success("Welcome back !")
+        }
+    } catch (Error:any) {
+        toast.error(`${Error.response.data.message}`);
+    }
 }
