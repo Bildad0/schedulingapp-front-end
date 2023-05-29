@@ -1,11 +1,10 @@
 
 "use client"
-import { useRouter } from "next/router";
+
 import { useState, useEffect } from "react"
 import{register} from "../../utils/api"
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 
 
 function SignUp() {
@@ -14,7 +13,16 @@ function SignUp() {
     const [password, setPassword] = useState("");
     const [timeZone, setTimeZone] = useState("");
     const [isLoading, setIsLoading] = useState(false);
-    const router = useRouter();
+
+
+
+
+
+
+
+
+
+
 
     const handleSubmit = () => {
         const userData = { email:email,  password:password, username:userName, timezone:timeZone, };
@@ -23,7 +31,7 @@ function SignUp() {
         console.log("from client", userData);
         setIsLoading(true);
         register(userData).then(() => setIsLoading(false)).finally(() => {
-            router.push("/dashboard");
+          console.log("User registered")
         });
        
     }

@@ -27,5 +27,6 @@ body {
 }
 
 .backgroud-image {
+  min-height: fit-content;
   background-image: url("https://www.biospace.com/getasset/ebdc4201-62a7-42e9-8223-365dbb2379c8/");
 }
