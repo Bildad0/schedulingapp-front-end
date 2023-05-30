@@ -2,36 +2,38 @@
 import Image from 'next/image'
 import { ThemeProvider } from "@material-tailwind/react";
 import { Carousel, Button } from "@material-tailwind/react";
+import Link from 'next/link';
 
 export default function Home() {
   return (
     <ThemeProvider>
-          <main className="min-h-fit relative">
+  <main className="min-h-fit">  
 
-                {/* Nav Bar */}
-        <div className='flex flex-row justify-between  sticky top-0 bg-cyan-200'>
-          <div className="flex  p-3">
+      {/* First section */} 
+      <div className=' text-white bg-fixed bg-contain  sm:bg-contain md:bg-cover lg:bg-cover xl:bg-cover backgroud-image'>
+             {/* Nav Bar */}
+        <div className="sticky top-0 bg-gray-600">
+        <div className='flex flex-row justify-between p-4 sm:p-4 md:p-8 lg:p-8 xl:p-8'>
+          <div className="flex">
          
           <h1 className='font-bold text-xl text-blue-900'>
-          SHIFTSY SCHEDULING
+          SHIFTSYC
             </h1>
           </div>
        
           <div className='hidden sm:hidden md:flex lg:flex xl:flex'>
             <ul className='flex flex-row gap-5'>
-              <li>FEATURES</li>
+              <li><Link href="/#features">FEATURES</Link></li>
               <li>BLOG</li>
-              <li className="bg-black p-2">TRY SCHEDULING</li>
+              <li className="">TRY SCHEDULING</li>
               <li>LOGIN </li>
             </ul>
           </div>
         </div>
-      {/* Top section */}
-      <div className='p-2 sm:p-2 md:p-8 lg:p-8 xl:p-8  text-white bg-fixed bg-contain  sm:bg-contain md:bg-cover lg:bg-cover xl:bg-cover backgroud-image'>
-    
-
-        {/* First section */}
-        <div className="ml-auto mr-auto flex place-content-center p-8 ">
+        </div>
+          
+          <div className="p-2 sm:p-2 md:p-8 lg:p-8 xl:p-8">
+          <div className="ml-auto mr-auto flex place-content-center p-8 ">
           <h2 className='text-center p-3 text-xl font-md bg-white text-black '>Simple scheduling</h2>
         </div>
        
@@ -45,11 +47,12 @@ export default function Home() {
           <button className='border-2 bg-blue-600 border-blue-600 text-white p-2 rounded-full font-bold'>Log In</button>
           <button className="border-2 bg-transparent text-blue-600 border-blue-600 rounded-md p-2 font-bold">Try Scheduling</button>
         </div>
+          </div>
         </div>
    
       {/* Second section features section*/}
 
-      <div className="p-4">
+      <div className="p-4" id="features">
         <h1 className='text-center font-bold text-blue-900 text-2xl p-5'>Features</h1>
         <div className='m-3'>
           <ul className='card shadow-xl bg-white rounded-md m-8 text-center '>
@@ -112,7 +115,7 @@ export default function Home() {
  <div className="m-3 border-2 border-slate-500 rounded-md bg-white hidden">
    <Carousel className="h-80 w-full">
       <div className="flex p-8 flex-row gap-2 place-content-between">
-       <Image src="" alt="first user" width={100} height={200} />
+       {/* <Image src="" alt="first user" width={100} height={200} /> */}
       <p>Hi first slide</p>
       </div>
       <div className="flex p-4 flex-row">
@@ -125,6 +128,38 @@ export default function Home() {
  </div>
   
      
+{/* Footer */}
+        <div className="text-center sm:text-center md:text-start lg:text-start xl:text-start bg-gradient-to-t p-6 from-blue-400 to-emerald-500 h-fit flex flex-col place-content-between sm:flex-col md:flex-row lg:flex-row xl:flex-row gap-x-1 sm:gap-x-1 md:gap-y-6 lg:gap-y-6 xl:gap-y-6">
+          <div className='p-5 flex flex-col'>
+            <h1 className="text-gradient-to-tr from-black to-blue-gray-300 font-bold text-3xl">SHIFTSYC</h1>
+            <p className="p-3">WE ARE YOUR DEDICATED PARTNER FOR LIFE.</p>
+          </div>
+          <div>
+            <ul className=" flex flex-col gap-3 text-start p-6">
+              <li className="hover:underline"><Link href="/#features">FEATURES</Link></li>
+              <li className="hover:underline">BLOG</li>
+              <li><button className="p-3 rounded-md border-2 bg-gray-700 text-white hover:bg-transparent">TRY SCHEDULING</button></li>
+              <li><button className="p-3 rounded-md border-2 bg-black text-white hover:bg-transparent">LOGIN</button></li>
+            </ul>
+          </div>
+          <div className="flex flex-col place-content-center p-3 gap-4">
+            
+            <h1 className="text-blue-900 font-bold text-start">GET MAIL</h1>
+            <form className="flex flex-row gap-3">
+              <input
+                type="email"
+                placeholder="Email address"
+                className="p-2 rounded-md hover:border-none active:border-none"
+              />
+              <button className="bg-black text-white rounded-md p-2 hover:border-2">
+                <span></span> GO
+              </button>
+            </form>
+            <h3 className="text-start">GET REGULAR UPDATES</h3>
+          
+          </div>
+        </div>
+        <div className="bg-gray-500 text-center p-2 ">&copy; 2023 SHIFTSYC</div>
     </main>
     </ThemeProvider>
 
