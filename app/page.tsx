@@ -44,8 +44,8 @@ export default function Home() {
         </div>
         
         <div className="flex flex-col sm:flex-col md:hidden lg:hidden xl:hidden gap-5 p-8">
-          <button className='border-2 bg-blue-600 border-blue-600 text-white p-2 rounded-full font-bold'>Log In</button>
-          <button className="border-2 bg-transparent text-blue-600 border-blue-600 rounded-md p-2 font-bold">Try Scheduling</button>
+          <button className='border-2 bg-blue-600 border-blue-600 text-white p-2 rounded-full font-bold'><Link href="/login">Log In</Link></button>
+          <button className="border-2 bg-transparent text-blue-600 border-blue-600 rounded-md p-2 font-bold"><Link href="/getstarted/signup">Try Scheduling</Link></button>
         </div>
           </div>
         </div>
@@ -138,8 +138,18 @@ export default function Home() {
             <ul className=" flex flex-col gap-3 text-start p-6">
               <li className="hover:underline"><Link href="/#features">FEATURES</Link></li>
               <li className="hover:underline">BLOG</li>
-              <li><button className="p-3 rounded-md border-2 bg-gray-700 text-white hover:bg-transparent">TRY SCHEDULING</button></li>
-              <li><button className="p-3 rounded-md border-2 bg-black text-white hover:bg-transparent">LOGIN</button></li>
+              <li>
+                <button className="p-3 rounded-md border-2 bg-gray-700 text-white hover:bg-transparent">
+                  <Link href="/getstarted/signup">TRY SCHEDULING</Link>
+                </button>
+              </li>
+              <li>
+                <button className="p-3 rounded-md border-2 bg-black text-white hover:bg-transparent">
+                  <Link href="/login">
+                  LOGIN
+                </Link>
+                </button>
+              </li>
             </ul>
           </div>
           <div className="flex flex-col place-content-center p-3 gap-4">
