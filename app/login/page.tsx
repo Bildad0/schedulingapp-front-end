@@ -21,7 +21,7 @@ function Login() {
     }
 
     return (
-        <div className="">
+        <div className="min-h-screen">
          <ToastContainer
                 position="top-right"
                 autoClose={5000}
@@ -29,6 +29,7 @@ function Login() {
                 closeOnClick
                 rtl={false}
                 pauseOnFocusLoss
+                className="m-4"
         />
             <div className="p-10">
                 <h1 className="text-center p-6 font-bold text-xl text-sky-900">Log In to your Account</h1>

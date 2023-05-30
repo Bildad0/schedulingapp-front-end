@@ -44,7 +44,7 @@ export default function Home() {
         </div>
         
         <div className="flex flex-col sm:flex-col md:hidden lg:hidden xl:hidden gap-5 p-8">
-          <button className='border-2 bg-blue-600 border-blue-600 text-white p-2 rounded-full font-bold'><Link href="/login">Log In</Link></button>
+          <button className='border-2 bg-blue-600 border-blue-600 text-white p-2 rounded-full font-bold'><Link href="/login" className="p-2">Log In</Link></button>
           <button className="border-2 bg-transparent text-blue-600 border-blue-600 rounded-md p-2 font-bold"><Link href="/getstarted/signup">Try Scheduling</Link></button>
         </div>
           </div>

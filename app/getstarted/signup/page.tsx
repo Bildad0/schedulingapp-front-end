@@ -47,7 +47,7 @@ function SignUp() {
                 pauseOnFocusLoss
             />
             <div className="p-10 text-white">
-            <h1 className="text-blue-600 font-bold text-xl text-center" >Sign Up for a free trial</h1>
+            <h1 className="text-blue-600 font-bold text-xl text-center p-3" >Sign Up for a free trial</h1>
                 <div className="card rounded-md bg-blue-200 shadow-lg text-blue-800 ml-auto mr-auto sm:ml-auto sm:mr-auto md:m-40">
                     <form className="flex flex-col p-6 gap-2"   >
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email" >
