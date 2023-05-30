@@ -143,8 +143,7 @@ export default function Home() {
             </ul>
           </div>
           <div className="flex flex-col place-content-center p-3 gap-4">
-            
-            <h1 className="text-blue-900 font-bold text-start">GET MAIL</h1>
+            <h3 className="text-start text-blue-900 font-bold">GET REGULAR UPDATES</h3>
             <form className="flex flex-row gap-3">
               <input
                 type="email"
@@ -155,11 +154,11 @@ export default function Home() {
                 <span></span> GO
               </button>
             </form>
-            <h3 className="text-start">GET REGULAR UPDATES</h3>
+          
           
           </div>
         </div>
-        <div className="bg-gray-500 text-center p-2 ">&copy; 2023 SHIFTSYC</div>
+        <div className="bg-blue-400  text-center p-2 ">&copy; 2023 SHIFTSYC</div>
     </main>
     </ThemeProvider>
 
