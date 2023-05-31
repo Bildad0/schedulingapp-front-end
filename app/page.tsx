@@ -1,13 +1,22 @@
 "use client"
 import Image from 'next/image'
 import { ThemeProvider } from "@material-tailwind/react";
-import { Carousel, Button } from "@material-tailwind/react";
+import {  Menu,
+  MenuHandler,
+  MenuList,
+  MenuItem,Carousel, Button } from "@material-tailwind/react";
 import Link from 'next/link';
 
+
+
+
 export default function Home() {
+
+
+
   return (
     <ThemeProvider>
-  <main className="min-h-fit">  
+  <main className="min-h-fit bg-gray-200">  
 
       {/* First section */} 
       <div className=' text-white bg-fixed bg-contain  sm:bg-contain md:bg-cover lg:bg-cover xl:bg-cover backgroud-image'>
@@ -25,10 +34,24 @@ export default function Home() {
             <ul className='flex flex-row gap-5'>
               <li><Link href="/#features">FEATURES</Link></li>
               <li>BLOG</li>
-              <li className="">TRY SCHEDULING</li>
-              <li>LOGIN </li>
+              <li className=""><Link href="/getstarted/signup">TRY SCHEDULING</Link></li>
+              <li><Link href="/login">LOGIN</Link></li>
             </ul>
-          </div>
+              </div>
+              
+              <div className="flex sm:flex md:hidden lg:hidden xl:hidden">
+                  <Menu placement="bottom-start">
+                    <MenuHandler>
+                      <Button className="bg-transparent border-2 border-blue-900 text-blue-900">Menu</Button>
+                    </MenuHandler>
+                    <MenuList>
+                      <MenuItem><Link href="/">HOME</Link></MenuItem>
+                      <MenuItem><Link href="/#features">FEATURES</Link></MenuItem>
+                      <MenuItem><Link href="/login">LOGIN</Link></MenuItem>
+                      <MenuItem><Link href="/getstarted/signup">TRY SCHEDULING</Link></MenuItem>
+                    </MenuList>
+                  </Menu>
+              </div>
         </div>
         </div>
           
@@ -53,8 +76,9 @@ export default function Home() {
       {/* Second section features section*/}
 
       <div className="p-4" id="features">
-        <h1 className='text-center font-bold text-blue-900 text-2xl p-5'>Features</h1>
-        <div className='m-3'>
+          <h1 className='text-center font-bold text-blue-900 text-2xl p-5'>Why Us</h1>
+          <div className="m-2 sm:m-2 md:m-4 lg:m-5 xl:m-5 flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row md:place-content-center">
+          <div className=''>
           <ul className='card shadow-xl bg-white rounded-md m-8 text-center '>
             <li className="flex place-content-center">
               <Image src="https://media.istockphoto.com/id/1313851605/vector/records-management-abstract-concept-vector-illustration.jpg?s=612x612&w=0&k=20&c=UonbHm1aI44c1jfL0UexZLR6w_Toelb6iZmY1VQ2e-U="
@@ -72,7 +96,7 @@ export default function Home() {
             </li>
           </ul>
         </div>
-        <div className='m-3'>
+        <div className=''>
           <ul className='card shadow-xl bg-white text-center rounded-md m-8'>
             <li className="flex place-content-center">
               <Image src="https://st2.depositphotos.com/1552219/8982/i/450/depositphotos_89822064-stock-photo-clock-time-punctual.jpg"
@@ -80,7 +104,8 @@ export default function Home() {
                 className='rounded-t-md'
                 width={200}
                 height={200}
-              /></li>
+                  />
+                </li>
             <li className="p-4">
               <h1 className="font-bold text-xl trext-blue-900">Helping you keep time</h1>
             </li>
@@ -89,7 +114,7 @@ export default function Home() {
             </li>
           </ul>
         </div>
-        <div className='m-3'>
+        <div className=''>
           <ul className='card shadow-xl bg-white text-center rounded-md m-8'>
             <li className="flex place-content-center">
               <Image src="https://static.vecteezy.com/system/resources/previews/004/264/987/original/the-best-memories-modern-calligraphy-inscription-wall-art-decor-design-wedding-photo-album-vector.jpg"
@@ -97,7 +122,8 @@ export default function Home() {
                 className='rounded-t-md'
                 width={200}
                 height={200}
-              /></li>
+                  />
+                </li>
             <li className="p-4">
               <h1 className="font-bold text-xl trext-blue-900">Memories</h1>
             </li>
@@ -106,6 +132,8 @@ export default function Home() {
             </li>
           </ul>
         </div>
+          </div>
+
       </div>
 
 

@@ -21,7 +21,7 @@ function Login() {
     }
 
     return (
-        <div className="min-h-screen">
+        <div className="min-h-screen bg-gray-200">
          <ToastContainer
                 position="top-right"
                 autoClose={5000}
@@ -66,20 +66,24 @@ function Login() {
                         const value = e.target.value
                         setPassword(value)
                     }}
-                />
-
-                <button
-                type="button"
-                onClick={()=>handleSubmit()}
-                className="bg-sky-300 shadow-xl hover:bg-white hover:text-sky-900 w-fit p-3 ml-auto mr-auto font-serif font-bold text-xl rounded-full">
-                            Log In
-                </button>
-            </form>
-            <div>
-                <h1 className="text-center p-5 text-blue-950">
-                    Forgot Password? <span className="hover:underline decoration-pink-500"><a href="">Reset</a></span>
-                </h1>
+                    />
+                    <div className="flex flex-row mt-3 gap-3 place-content-between">
+                    <button
+                        type="button"
+                        onClick={()=>handleSubmit()}
+                        className="border-2 border-black shadow-xl  hover:text-sky-900 p-2  font-serif font-bold text-md rounded-md">
+                        Log In
+                        </button>
+                        <div className="">
+                <Link href="/">
+                <h1 className="text-center p-5 text-blue-900"><i>Forgot Password?</i></h1>
+                </Link>
             </div>
+                    </div>
+
+              
+            </form>
+          
         </div>
 
     </div>)

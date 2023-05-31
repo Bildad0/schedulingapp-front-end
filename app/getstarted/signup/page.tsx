@@ -5,6 +5,7 @@ import { useState, useEffect } from "react"
 import{register} from "../../utils/api"
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Link from "next/link";
 
 
 function SignUp() {
@@ -14,16 +15,6 @@ function SignUp() {
     const [timeZone, setTimeZone] = useState("");
     const [isLoading, setIsLoading] = useState(false);
 
-
-
-
-
-
-
-
-
-
-
     const handleSubmit = () => {
         const userData = { email:email,  password:password, username:userName, timezone:timeZone, };
         // should validate the values then set validate to true 
@@ -31,7 +22,8 @@ function SignUp() {
         console.log("from client", userData);
         setIsLoading(true);
         register(userData).then(() => setIsLoading(false)).finally(() => {
-          console.log("User registered")
+          console.log("User registered");
+          return <Link href="/dashboard"/>
         });
        
     }
