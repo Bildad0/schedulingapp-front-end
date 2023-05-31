@@ -15,11 +15,13 @@ export const register = async (payload: {}) => {
     try {
         const res = await instance.post("auth/register", payload);
         if (res.status == 200) {
-            localStorage.setItem("user",res.data.data);
+            console.log(res.data.data)
+            localStorage.setItem("user", res.data.data);
+            localStorage.setItem("userId", res.data.data.id)
             toast.success("User registered")
         }toast.error(res.data.message)
-    } catch (Error:any) {
-        toast.error(`${Error.message}`);
+    } catch (error) {
+        toast.error(`${error}`);
        
     }
  
@@ -32,9 +34,11 @@ export const login = async (payload:{}) => {
         if (res.status == 200) { 
             console.log(res.data.token);
             localStorage.setItem("userToken", res.data.token);
-            toast.success("Welcome back !")
+            toast.success("Welcome back !");
+            localStorage.setItem("userId", res.data.user.id);
         }toast.error(res.data.message)
-    } catch (Error:any) {
-        toast.error(`${Error.message}`);
+    } catch (error) {
+        toast.error(`${error}`);
     }
 }
+

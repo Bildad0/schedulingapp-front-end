@@ -84,6 +84,7 @@ function SignUp() {
                                 setTimeZone(value)
                             }}
                         >
+                            <option></option>
                             <option value="Nairobi">Nairobi, Kenya</option>
                             <option value="Mombasa">Mombasa, Kenya</option>
                             <option value="Kisumu">Kisumu, Kenya</option>
