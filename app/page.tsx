@@ -1,10 +1,7 @@
 "use client"
 import Image from 'next/image'
 import { ThemeProvider } from "@material-tailwind/react";
-import {  Menu,
-  MenuHandler,
-  MenuList,
-  MenuItem,Carousel, Button } from "@material-tailwind/react";
+import {Menu,MenuHandler,MenuList,MenuItem,Carousel,Button } from "@material-tailwind/react";
 import Link from 'next/link';
 
 
@@ -37,21 +34,21 @@ export default function Home() {
               <li className=""><Link href="/getstarted/signup">TRY SCHEDULING</Link></li>
               <li><Link href="/login">LOGIN</Link></li>
             </ul>
-              </div>
+          </div>
               
-              <div className="flex sm:flex md:hidden lg:hidden xl:hidden">
-                  <Menu placement="bottom-start">
-                    <MenuHandler>
-                      <Button className="bg-transparent border-2 border-blue-900 text-blue-900">Menu</Button>
-                    </MenuHandler>
-                    <MenuList>
-                      <MenuItem><Link href="/">HOME</Link></MenuItem>
-                      <MenuItem><Link href="/#features">FEATURES</Link></MenuItem>
-                      <MenuItem><Link href="/login">LOGIN</Link></MenuItem>
-                      <MenuItem><Link href="/getstarted/signup">TRY SCHEDULING</Link></MenuItem>
-                    </MenuList>
-                  </Menu>
-              </div>
+          <div className="flex sm:flex md:hidden lg:hidden xl:hidden">
+            <Menu placement="bottom-start">
+              <MenuHandler>
+               <Button className="bg-transparent border-2 border-blue-900 text-blue-900">Menu</Button>
+              </MenuHandler>
+              <MenuList>
+                <MenuItem><Link href="/">HOME</Link></MenuItem>
+                <MenuItem><Link href="/#features">FEATURES</Link></MenuItem>
+                <MenuItem><Link href="/login">LOGIN</Link></MenuItem>
+                <MenuItem><Link href="/getstarted/signup">TRY SCHEDULING</Link></MenuItem>
+              </MenuList>
+            </Menu>
+          </div>
         </div>
         </div>
           
