@@ -1,8 +1,9 @@
 "use client"
 import Image from 'next/image'
 import { ThemeProvider } from "@material-tailwind/react";
-import {Menu,MenuHandler,MenuList,MenuItem,Carousel,Button } from "@material-tailwind/react";
+import {Carousel} from "@material-tailwind/react";
 import Link from 'next/link';
+import NavBar from './components/navBar';
 
 
 
@@ -14,43 +15,14 @@ export default function Home() {
   return (
     <ThemeProvider>
   <main className="min-h-fit bg-gray-200">  
+ 
 
       {/* First section */} 
       <div className=' text-white bg-fixed bg-contain  sm:bg-contain md:bg-cover lg:bg-cover xl:bg-cover backgroud-image'>
              {/* Nav Bar */}
-        <div className="sticky top-0 bg-gray-600">
-        <div className='flex flex-row justify-between p-4 sm:p-4 md:p-8 lg:p-8 xl:p-8'>
-          <div className="flex">
-         
-          <h1 className='font-bold text-xl text-blue-900'>
-          SHIFTSYC
-            </h1>
-          </div>
-       
-          <div className='hidden sm:hidden md:flex lg:flex xl:flex'>
-            <ul className='flex flex-row gap-5'>
-              <li><Link href="/#features">FEATURES</Link></li>
-              <li>BLOG</li>
-              <li className=""><Link href="/getstarted/signup">TRY SCHEDULING</Link></li>
-              <li><Link href="/login">LOGIN</Link></li>
-            </ul>
-          </div>
-              
-          <div className="flex sm:flex md:hidden lg:hidden xl:hidden">
-            <Menu placement="bottom-start">
-              <MenuHandler>
-               <Button className="bg-transparent border-2 border-blue-900 text-blue-900">Menu</Button>
-              </MenuHandler>
-              <MenuList>
-                <MenuItem><Link href="/">HOME</Link></MenuItem>
-                <MenuItem><Link href="/#features">FEATURES</Link></MenuItem>
-                <MenuItem><Link href="/login">LOGIN</Link></MenuItem>
-                <MenuItem><Link href="/getstarted/signup">TRY SCHEDULING</Link></MenuItem>
-              </MenuList>
-            </Menu>
-          </div>
-        </div>
-        </div>
+             <div className="sticky top-0">
+  <NavBar/>
+  </div>
           
           <div className="p-2 sm:p-2 md:p-8 lg:p-8 xl:p-8">
           <div className="ml-auto mr-auto flex place-content-center p-8 ">
