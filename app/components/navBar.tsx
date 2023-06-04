@@ -5,7 +5,7 @@ function NavBar() {
     return(
       <ThemeProvider>
       <div className="bg-gray-600">
-        <div className='flex flex-row justify-between p-4 sm:p-4 md:p-8 lg:p-8 xl:p-8'>
+        <nav className='flex flex-row justify-between p-4 sm:p-4 md:p-8 lg:p-8 xl:p-8'>
           <div className="flex">
           <h1 className='font-bold text-xl text-blue-900'>
           SHIFTSYC
@@ -32,7 +32,7 @@ function NavBar() {
               </MenuList>
             </Menu>
           </div>
-        </div>
+        </nav>
         </div>
       </ThemeProvider>
   
